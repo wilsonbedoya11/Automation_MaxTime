@@ -1,0 +1,18 @@
+
+g
+java:S1192#"JDefine a constant instead of duplicating this literal "La fecha " 3 times.(è“þ‘8‚ì«Æ€2
+r	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø®ó§ÿÿÿÿÿ8‚ì«Æ€2
+r	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø®ó§ÿÿÿÿÿ8‚ì«Æ€2
+\
+java:S1118":Add a private constructor to hide the implicit public one.(ñää¤øÿÿÿÿ8›ì«Æ€2
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¯‘Çÿÿÿÿÿ8›ì«Æ€2
+G	java:S106#"+Replace this use of System.out by a logger.(è“þ‘8Ÿì«Æ€2
+L	java:S106&"+Replace this use of System.out by a logger.( Ô˜Üúÿÿÿÿ8 ì«Æ€2
+G	java:S106)"+Replace this use of System.out by a logger.(Þ›ÍÄ8 ì«Æ€2
+o	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø®ó§ÿÿÿÿÿ8¡ì«Æ€2
+N
+java:S1128"1Remove this unused import 'java.text.DateFormat'.(÷Œá¼8¥ì«Æ€2
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èýÿÿÿÿ8¥ì«Æ€2
+\
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8¥ì«Æ€2

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Reporte de horas pagina Max time de choucair</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Reporte de horas pagina Max time de choucair</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Reporte de horas pagina Max time de choucair</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8m6.46s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Reporte de horas laboradas</td>
+<td class="success">8m6.46s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+Scenario Outline: Reporte de horas laboradas                                      ?[90m# src/test/resources/features/reporteHoras.feature:15?[0m
+12:03:06.040 [Test worker] INFO   - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Reporte de horas laboradas(reporte-de-horas-pagina-max-time-de-choucair;reporte-de-horas-laboradas)
+--------------------------------------------------------------------------------
+12:03:08.676 [Test worker] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+12:03:08.689 [Test worker] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [test-type, ignore-certificate-errors, --window-size=1000,800, incognito, disable-infobars, disable-gpu, disable-default-apps, disable-popup-blocking, headless, test-type, ignore-certificate-errors, --window-size=1000,800, incognito, disable-infobars, disable-gpu, disable-default-apps, disable-popup-blocking, headless, remote-allow-origins=*, --start-maximized], extensions: []}}
+  ?[32mGiven ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m estÃ¡ en la pÃ¡gina de max time?[0m                                  ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elEstÃ¡EnLaPÃ¡ginaDeMaxTime(net.serenitybdd.screenplay.Actor)?[0m
+  ?[32mWhen ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m realiza el login satisfatorio?[0m                                   ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elRealizaElLoginSatisfatorio(net.serenitybdd.screenplay.Actor)?[0m
+FECHA ES: 12/08/2024
+La fecha 12/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 13/08/2024
+La fecha 13/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 14/08/2024
+La fecha 14/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 15/08/2024
+La fecha 15/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 16/08/2024
+La fecha 16/08/2024 es un día laboral.
+Dia laboral
+  ?[32mWhen ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m realiza el reporte de las actividades realizadas durante el dia?[0m ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elRealizaElReporteDeLasActividadesRealizadasDuranteElDia(net.serenitybdd.screenplay.Actor,co.com.productos.certificacion.models.Datos)?[0m
+    | proyecto | proyecto_vacas | tipo_hora   | tipo_hora_vacas | servicio | actividad            | actividad_vacas | horas | comentario                   | comentario_vacas | fecha_vacaciones_inicio | fecha_vacaciones_fin | [empty] |
+    | EVC      | Varios         | H. Proyecto | H. Choucair     | auto     | EJECUCIÃ“N DE PRUEBAS | NOV-VACACIONES  | 8     | EjecuciÃ³n de casos de prueba | Vacaciones       | 1/7/2024                | 16/7/2024            | [empty] |
+  ?[32mThen ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m finaliza el reporte correctamente?[0m                               ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elFinalizaElReporteCorrectamente(net.serenitybdd.screenplay.Actor)?[0m
+12:11:11.412 [Test worker] INFO   - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Reporte de horas laboradas
+----------------------------------------------------------------------?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>ago. 11, 2024 12:03:20 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at 11/08/2024, 12:11:12 p. m.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Reporte de horas pagina Max time de choucair" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-11T17:03:04" hostname="DESKTOP-QJR7FA1" time="486.457">
+  <properties/>
+  <testcase name="Reporte de horas laboradas" classname="Reporte de horas pagina Max time de choucair" time="486.457"/>
+  <system-out><![CDATA[
+Scenario Outline: Reporte de horas laboradas                                      ?[90m# src/test/resources/features/reporteHoras.feature:15?[0m
+12:03:06.040 [Test worker] INFO   - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Reporte de horas laboradas(reporte-de-horas-pagina-max-time-de-choucair;reporte-de-horas-laboradas)
+--------------------------------------------------------------------------------
+12:03:08.676 [Test worker] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+12:03:08.689 [Test worker] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [test-type, ignore-certificate-errors, --window-size=1000,800, incognito, disable-infobars, disable-gpu, disable-default-apps, disable-popup-blocking, headless, test-type, ignore-certificate-errors, --window-size=1000,800, incognito, disable-infobars, disable-gpu, disable-default-apps, disable-popup-blocking, headless, remote-allow-origins=*, --start-maximized], extensions: []}}
+  ?[32mGiven ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m estÃ¡ en la pÃ¡gina de max time?[0m                                  ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elEstÃ¡EnLaPÃ¡ginaDeMaxTime(net.serenitybdd.screenplay.Actor)?[0m
+  ?[32mWhen ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m realiza el login satisfatorio?[0m                                   ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elRealizaElLoginSatisfatorio(net.serenitybdd.screenplay.Actor)?[0m
+FECHA ES: 12/08/2024
+La fecha 12/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 13/08/2024
+La fecha 13/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 14/08/2024
+La fecha 14/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 15/08/2024
+La fecha 15/08/2024 es un día laboral.
+Dia laboral
+FECHA ES: 16/08/2024
+La fecha 16/08/2024 es un día laboral.
+Dia laboral
+  ?[32mWhen ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m realiza el reporte de las actividades realizadas durante el dia?[0m ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elRealizaElReporteDeLasActividadesRealizadasDuranteElDia(net.serenitybdd.screenplay.Actor,co.com.productos.certificacion.models.Datos)?[0m
+    | proyecto | proyecto_vacas | tipo_hora   | tipo_hora_vacas | servicio | actividad            | actividad_vacas | horas | comentario                   | comentario_vacas | fecha_vacaciones_inicio | fecha_vacaciones_fin | [empty] |
+    | EVC      | Varios         | H. Proyecto | H. Choucair     | auto     | EJECUCIÃ“N DE PRUEBAS | NOV-VACACIONES  | 8     | EjecuciÃ³n de casos de prueba | Vacaciones       | 1/7/2024                | 16/7/2024            | [empty] |
+  ?[32mThen ?[0m?[32mEl ?[0m?[32m?[1musuario?[0m?[32m finaliza el reporte correctamente?[0m                               ?[90m# co.com.productos.certificacion.stepdefinitions.reporteMaxTimeStepDefinition.elFinalizaElReporteCorrectamente(net.serenitybdd.screenplay.Actor)?[0m
+12:11:11.412 [Test worker] INFO   - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Reporte de horas laboradas
+----------------------------------------------------------------------?[0m
+]]></system-out>
+  <system-err><![CDATA[ago. 11, 2024 12:03:20 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+]]></system-err>
+</testsuite>

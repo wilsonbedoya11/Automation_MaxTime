@@ -1,0 +1,24 @@
+
+{
+java:S1104"YMake CAMPO_USUARIO a static final constant or non-public and provide accessors if needed.(æ¢‘ˆûÿÿÿÿ8Ë¡ì1
+z
+java:S1104
+"]Make CAMPO_CONTRASEÃ‘A a static final constant or non-public and provide accessors if needed.(¨àö³8œ¡ì1
+y
+java:S1104"\Make BOTON_CONECTARSE a static final constant or non-public and provide accessors if needed.(»£Èî8İç¡ì1
+U
+java:S1444"3Make this "public static CAMPO_USUARIO" field final(æ¢‘ˆûÿÿÿÿ8‚Ë¡ì1
+T
+java:S1444
+"7Make this "public static CAMPO_CONTRASEÃ‘A" field final(¨àö³8œ¡ì1
+S
+java:S1444"6Make this "public static BOTON_CONECTARSE" field final(»£Èî8Şç¡ì1
+z
+java:S3008"XRename this field "CAMPO_USUARIO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¢‘ˆûÿÿÿÿ8…Ë¡ì1
+y
+java:S3008
+"\Rename this field "CAMPO_CONTRASEÃ‘A" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨àö³8“œ¡ì1
+x
+java:S3008"[Rename this field "BOTON_CONECTARSE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»£Èî8áç¡ì1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(á‚×´8Ø‚¡ì1

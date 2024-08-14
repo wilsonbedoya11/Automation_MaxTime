@@ -1,0 +1,36 @@
+
+w
+java:S1104"ZMake CAMPO_INGRESAR a static final constant or non-public and provide accessors if needed.(üáÈŠ8ä•Æş1
+‘
+java:S1104
+"tMake CHECK_BOX_PRIMER_ELEMENTO_LISTA_PROYECTO a static final constant or non-public and provide accessors if needed.(å”±ë8ä•Æş1
+v
+java:S1104"YMake BOTON_ACEPTAR a static final constant or non-public and provide accessors if needed.(ÛÌ°Ÿ8ä•Æş1
+–
+java:S1104"tMake CHECK_BOX_PRIMER_ELEMENTO_LISTA_SERVICIO a static final constant or non-public and provide accessors if needed.(¹İÛ—ùÿÿÿÿ8ä•Æş1
+
+java:S1104"lMake BOTON_ACEPTAR_MENSAJE_CERRAR_DIA a static final constant or non-public and provide accessors if needed.(‹æ íúÿÿÿÿ8ä•Æş1
+Q
+java:S1444"4Make this "public static CAMPO_INGRESAR" field final(üáÈŠ8ä•Æş1
+k
+java:S1444
+"NMake this "public static CHECK_BOX_PRIMER_ELEMENTO_LISTA_PROYECTO" field final(å”±ë8ä•Æş1
+P
+java:S1444"3Make this "public static BOTON_ACEPTAR" field final(ÛÌ°Ÿ8ä•Æş1
+p
+java:S1444"NMake this "public static CHECK_BOX_PRIMER_ELEMENTO_LISTA_SERVICIO" field final(¹İÛ—ùÿÿÿÿ8ä•Æş1
+h
+java:S1444"FMake this "public static BOTON_ACEPTAR_MENSAJE_CERRAR_DIA" field final(‹æ íúÿÿÿÿ8ä•Æş1
+v
+java:S3008"YRename this field "CAMPO_INGRESAR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üáÈŠ8ä•Æş1
+
+java:S3008
+"sRename this field "CHECK_BOX_PRIMER_ELEMENTO_LISTA_PROYECTO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å”±ë8‘ä•Æş1
+u
+java:S3008"XRename this field "BOTON_ACEPTAR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛÌ°Ÿ8‘ä•Æş1
+•
+java:S3008"sRename this field "CHECK_BOX_PRIMER_ELEMENTO_LISTA_SERVICIO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹İÛ—ùÿÿÿÿ8‘ä•Æş1
+
+java:S3008"kRename this field "BOTON_ACEPTAR_MENSAJE_CERRAR_DIA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹æ íúÿÿÿÿ8‘ä•Æş1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(³½íğ8“ä•Æş1

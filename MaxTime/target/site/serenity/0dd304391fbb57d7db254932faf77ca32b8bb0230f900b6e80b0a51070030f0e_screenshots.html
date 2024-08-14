@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Demo Project using Serenity and Cucumber</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="dace883302e1d6853c59da73b74f11aea1b18e6ef4a59dc6fc8bfb59a32d546a.html">Reporte De Horas Pagina Max Time De Choucair</a></span>
+                > <span class="truncate-60"><a
+                    href="0dd304391fbb57d7db254932faf77ca32b8bb0230f900b6e80b0a51070030f0e.html">Reporte de horas laboradas </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-08-2024 12:03</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Reporte De Horas Pagina Max Time De Choucair </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="376e1536bb68812a880e84ca7a0c6d104d541788793f22a36b4462a6a9aaa344.html">5 To 10 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Reporte de horas laboradas
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given El usuario está en la página de max time<br>When El usuario realiza el login satisfatorio<br>When El usuario realiza el reporte de las actividades realizadas durante el dia<br><table class='embedded'><thead><th>proyecto</th><th>proyecto_vacas</th><th>tipo_hora</th><th>tipo_hora_vacas</th><th>servicio</th><th>actividad</th><th>actividad_vacas</th><th>horas</th><th>comentario</th><th>comentario_vacas</th><th>fecha_vacaciones_inicio</th><th>fecha_vacaciones_fin</th><th></th></thead><tbody><tr><td>&lt;proyecto&gt;</td><td>&lt;proyecto_vacas&gt;</td><td>&lt;tipo_hora&gt;</td><td>&lt;tipo_hora_vacas&gt;</td><td>&lt;servicio&gt;</td><td>&lt;actividad&gt;</td><td>&lt;actividad_vacas&gt;</td><td>&lt;horas&gt;</td><td>&lt;comentario&gt;</td><td>&lt;comentario_vacas&gt;</td><td>&lt;fecha_vacaciones_inicio&gt;</td><td>&lt;fecha_vacaciones_fin&gt;</td><td></td></tr></tbody></table><br>Then El usuario finaliza el reporte correctamente</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="97b9212f3a63626f3d8df60c6e5c1f30bc0230a8d52cf64371f8be1dcfc45307.png" title=" 1: Reporte de horas laboradas ({proyecto=EVC, proyecto_vacas=Varios, tipo_hora=H. Proyecto, tipo_hora_vacas=H. Choucair, servicio=auto, actividad=EJECUCI&Oacute;N DE PRUEBAS, actividad_vacas=NOV-VACACIONES, horas=8, comentario=Ejecuci&oacute;n de casos de prueba, comentario_vacas=Vacaciones, fecha_vacaciones_inicio=1/7/2024, fecha_vacaciones_fin=16/7/2024})" width="0"/>
+                <img src="97b9212f3a63626f3d8df60c6e5c1f30bc0230a8d52cf64371f8be1dcfc45307.png" title=" Given El usuario est&aacute; en la p&aacute;gina de max time" width="0"/>
+                <img src="97b9212f3a63626f3d8df60c6e5c1f30bc0230a8d52cf64371f8be1dcfc45307.png" title=" Usuario navegar a la pagina" width="0"/>
+                <img src="97b9212f3a63626f3d8df60c6e5c1f30bc0230a8d52cf64371f8be1dcfc45307.png" title=" usuario opens the browser at https://operacion.choucairtesting.ca/Maxtime/Login.aspx?ReturnUrl=%2fMaxtime%2fdefault.aspx" width="0"/>
+                <img src="97b9212f3a63626f3d8df60c6e5c1f30bc0230a8d52cf64371f8be1dcfc45307.png" title=" Usuario navegar a la pagina (completed)" width="0"/>
+                <img src="97b9212f3a63626f3d8df60c6e5c1f30bc0230a8d52cf64371f8be1dcfc45307.png" title=" Given El usuario est&aacute; en la p&aacute;gina de max time (completed)" width="0"/>
+                <img src="ac8f6c31dda6a6198a66e79aee748dcc9adb229e95e57ef8b1646502cf4b76f1.png" title=" When El usuario realiza el login satisfatorio" width="0"/>
+                <img src="ac8f6c31dda6a6198a66e79aee748dcc9adb229e95e57ef8b1646502cf4b76f1.png" title=" Usuario ingresar credenciales" width="0"/>
+                <img src="ac8f6c31dda6a6198a66e79aee748dcc9adb229e95e57ef8b1646502cf4b76f1.png" title=" usuario enters 'wbedoya' into the element" width="0"/>
+                <img src="5607ce6c1fbf0ae8c39a71b047f6cb1f9a464e1a927bf681c2bb686ed571a8dd.png" title=" usuario enters 'Junio2022*0611' into the element" width="0"/>
+                <img src="fb1f25307b31906423ecb096173fac770038fb0708135876c989cd2d1448a5ab.png" title=" usuario clicks on the element" width="0"/>
+                <img src="0f2257eee0b977093ff6adffa391e9c446c58e8d0e32aa95a10c0fdb0aaa04df.png" title=" Usuario ingresar credenciales (completed)" width="0"/>
+                <img src="aeae0d6e87bed047bbf02030d6ff62bddb9e12680d2450c2e0d67bc207f80d13.png" title=" Usuario esperar" width="0"/>
+                <img src="aeae0d6e87bed047bbf02030d6ff62bddb9e12680d2450c2e0d67bc207f80d13.png" title=" When El usuario realiza el login satisfatorio (completed)" width="0"/>
+                <img src="aeae0d6e87bed047bbf02030d6ff62bddb9e12680d2450c2e0d67bc207f80d13.png" title=" When El usuario realiza el reporte de las actividades realizadas durante el dia
+| proyecto | proyecto_vacas | tipo_hora | tipo_hora_vacas | servicio | actividad | actividad_vacas | horas | comentario | comentario_vacas | fecha_vacaciones_inicio | fecha_vacaciones_fin |  |
+| EVC | Varios | H. Proyecto | H. Choucair | auto | EJECUCI&Oacute;N DE PRUEBAS | NOV-VACACIONES | 8 | Ejecuci&oacute;n de casos de prueba | Vacaciones | 1/7/2024 | 16/7/2024 |  |" width="0"/>
+                <img src="aeae0d6e87bed047bbf02030d6ff62bddb9e12680d2450c2e0d67bc207f80d13.png" title=" Usuario conocer dia" width="0"/>
+                <img src="ad45b212a4b758401a97f8b72e3bea5d32b9b5ff5432815fcec117e1dd6de6bb.png" title=" Usuario seleccionar dia" width="0"/>
+                <img src="ad45b212a4b758401a97f8b72e3bea5d32b9b5ff5432815fcec117e1dd6de6bb.png" title=" usuario clicks on the element" width="0"/>
+                <img src="2b7b35dc26809497ea5426a343471e1a1934e663a0babf4eb88d3dcca568c978.png" title=" Usuario seleccionar dia (completed)" width="0"/>
+                <img src="64b5aedf473b03ec2c710417f280ca5b3653e6e2b8ae65f2888de8d96562eaaf.png" title=" Usuario seleccionar nuevo reporte" width="0"/>
+                <img src="64b5aedf473b03ec2c710417f280ca5b3653e6e2b8ae65f2888de8d96562eaaf.png" title=" usuario clicks on the element" width="0"/>
+                <img src="503ccdd51cc8dee697f271caf503cb275f4fd7b7114b7f8073df6310e5bf1dfc.png" title=" Usuario esperar" width="0"/>
+                <img src="503ccdd51cc8dee697f271caf503cb275f4fd7b7114b7f8073df6310e5bf1dfc.png" title=" Usuario seleccionar nuevo reporte (completed)" width="0"/>
+                <img src="1fe716d1cc59d0c0d740a147dbf96bd4a57ab4622d0610208833efeb78b1943d.png" title=" Usuario ingresar informacion reporte" width="0"/>
+                <img src="1fe716d1cc59d0c0d740a147dbf96bd4a57ab4622d0610208833efeb78b1943d.png" title=" usuario clicks on the element" width="0"/>
+                <img src="b894128594bf21b55cee4726295c930e2711b0980f6d9bf0806f27a13befcf21.png" title=" Usuario esperar" width="0"/>
+                <img src="592592dec4965112fd44ff968bc9eab08e5f7615669272b63f96ab773cfca061.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="f6c7d02626ab2ec43317c111ad503bf8fbec8c825da4c6dd5d1ba6a328ab0d75.png" title=" usuario enters 'EVC' into the element" width="0"/>
+                <img src="d1c096bfb7f1b870bd9bba735b788a3b9fe51e0d7d4eee6b673523fb5bc6d24f.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="4e25d1563eaa23493b5ce0218672ebdfd80e334da0f46efa63d836594eab0e73.png" title=" usuario clicks on the element" width="0"/>
+                <img src="4e25d1563eaa23493b5ce0218672ebdfd80e334da0f46efa63d836594eab0e73.png" title=" Usuario esperar" width="0"/>
+                <img src="8fde87834ad65e5a378d61d4131ba276b217436d442cf7aee55676cb2c4c0294.png" title=" usuario clicks on the element" width="0"/>
+                <img src="7b937d451b3da9bc6d599ceca8d8213f2aedec82f309333a44aa196fc7017100.png" title=" Usuario esperar" width="0"/>
+                <img src="7b937d451b3da9bc6d599ceca8d8213f2aedec82f309333a44aa196fc7017100.png" title=" Usuario esperar" width="0"/>
+                <img src="6d5d1e15f56babf54a096fb8d656bf219e107180511ee405f7e2f7b880883efe.png" title=" usuario clicks on the element" width="0"/>
+                <img src="d7f3b4d9a4b54854d286f3f7ab6cd9fd5af3dc0ee63c4bf369b072b9c38b77e5.png" title=" usuario clicks on the element" width="0"/>
+                <img src="fdc3db662381cd7912738ab4e59c25490819842bcd4b423fe864d733151821dd.png" title=" Usuario esperar" width="0"/>
+                <img src="686f841ababd41883773f098d05bcd55a2e0ec55cced9ff3b1ab01f7fb64a3f3.png" title=" usuario clicks on the element" width="0"/>
+                <img src="ba6b625d7a001c18962ed4760e95c49fc8c4fd53e50d0b625577fd72eac5fc4f.png" title=" Usuario esperar" width="0"/>
+                <img src="81c8975807beeec180d85c1577eb85b4217078bb94e80d77995bc9aaec19af68.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="c8b29e3259a5ad2a47b0ddaad11df1764c29cf61bfeaecc83aaf98896b8d0ef5.png" title=" usuario enters 'auto' into the element" width="0"/>
+                <img src="09c70073c5d86473ad13b0f103c86dd184c9ad2808b712d80553c5c71d9bd904.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="6d651d5946d335845a0abc7421527be581197b6e19fb63f7a96baf19fe6e3044.png" title=" usuario clicks on the element" width="0"/>
+                <img src="fdc3db662381cd7912738ab4e59c25490819842bcd4b423fe864d733151821dd.png" title=" usuario clicks on the element" width="0"/>
+                <img src="1c7cc525de03313b27964a19b6fdbc84531b14d35ccaa6edf2adf15b9947654e.png" title=" Usuario esperar" width="0"/>
+                <img src="b89c2cff389031fc2a0a376f70a688a67b3fd5049a8472ebd289f04501f0eebd.png" title=" usuario clicks on the element" width="0"/>
+                <img src="8367f1542cf2f8145ac8adee9aec94442883835dbeee774b1f99e5f5a2aecdb0.png" title=" usuario clicks on the element" width="0"/>
+                <img src="8367f1542cf2f8145ac8adee9aec94442883835dbeee774b1f99e5f5a2aecdb0.png" title=" Usuario esperar" width="0"/>
+                <img src="fb5ab0cd1c6468b00d7ae306147b46430ec492eacdea1bb7bb2b912de30ccd49.png" title=" usuario enters '8' into the element" width="0"/>
+                <img src="6ac6a3b4681c38ec820b5c41d77257fbe41a1b0941026ae38cf9a3ec350dfe46.png" title=" usuario enters 'Ejecuci&oacute;n de casos de prueba' into the element" width="0"/>
+                <img src="a8b3fda0e6afa47bed9fbe485547e2c45e7f7b90e1714568f67b0e0ce1e4dc76.png" title=" usuario clicks on the element" width="0"/>
+                <img src="47fac36ce7f40375fc9cc4e845e544e9ec16f16bdd774e9b2c8fefd865c0b85c.png" title=" Usuario esperar" width="0"/>
+                <img src="47fac36ce7f40375fc9cc4e845e544e9ec16f16bdd774e9b2c8fefd865c0b85c.png" title=" Usuario ingresar informacion reporte (completed)" width="0"/>
+                <img src="ef8d7f163dd98bf4af13fce298a7e7a15f2cd3284934c1775086587d185b9692.png" title=" Usuario cerrar dia" width="0"/>
+                <img src="ef8d7f163dd98bf4af13fce298a7e7a15f2cd3284934c1775086587d185b9692.png" title=" usuario clicks on the element" width="0"/>
+                <img src="5ff20a238060fc13f4689e2a9cf49f8a5c22c9afa79e1bdba91e0a0ca0a3c4ce.png" title=" Usuario esperar" width="0"/>
+                <img src="5ff20a238060fc13f4689e2a9cf49f8a5c22c9afa79e1bdba91e0a0ca0a3c4ce.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="58a9ebcaf0d5a1682e75686acc0906dea54174007859870732a8ae622b4b2051.png" title=" usuario clicks on the element" width="0"/>
+                <img src="86fb81322396b3e6f26cc66fce78b72bff509d146f5aa087c2d2763f67c1d909.png" title=" Usuario esperar" width="0"/>
+                <img src="86fb81322396b3e6f26cc66fce78b72bff509d146f5aa087c2d2763f67c1d909.png" title=" Usuario esperar" width="0"/>
+                <img src="86fb81322396b3e6f26cc66fce78b72bff509d146f5aa087c2d2763f67c1d909.png" title=" Usuario cerrar dia (completed)" width="0"/>
+                <img src="86fb81322396b3e6f26cc66fce78b72bff509d146f5aa087c2d2763f67c1d909.png" title=" Usuario conocer dia" width="0"/>
+                <img src="1ea4c8349c3da0d1a2b462fc33800612c738f72b92ede85b28409f5bba56dbd1.png" title=" Usuario seleccionar dia" width="0"/>
+                <img src="1ea4c8349c3da0d1a2b462fc33800612c738f72b92ede85b28409f5bba56dbd1.png" title=" usuario clicks on the element" width="0"/>
+                <img src="70a46d74f9f7d49668ff8b84a21ee839cb2a2eb4d03cfe0d1c05b00ebeae8dfe.png" title=" Usuario seleccionar dia (completed)" width="0"/>
+                <img src="30795d3a25d154bee3f4abac0d5accbf85e76eaad05f27121e056d6da17e0b1d.png" title=" Usuario seleccionar nuevo reporte" width="0"/>
+                <img src="30795d3a25d154bee3f4abac0d5accbf85e76eaad05f27121e056d6da17e0b1d.png" title=" usuario clicks on the element" width="0"/>
+                <img src="262bd710f8d6d74f6d0153f8499ed86cea032ca78547dcec5ad9f4b88c1a86e7.png" title=" Usuario esperar" width="0"/>
+                <img src="262bd710f8d6d74f6d0153f8499ed86cea032ca78547dcec5ad9f4b88c1a86e7.png" title=" Usuario seleccionar nuevo reporte (completed)" width="0"/>
+                <img src="8b939fb39ec24dc7459814238cb76207495fa64860ff306be2ecb6e4e4f64895.png" title=" Usuario ingresar informacion reporte" width="0"/>
+                <img src="8b939fb39ec24dc7459814238cb76207495fa64860ff306be2ecb6e4e4f64895.png" title=" usuario clicks on the element" width="0"/>
+                <img src="3c3f9846172ed09f1658a3ccc2729036fed4ed0a75ff8c62c0c0f85f6ab61b6b.png" title=" Usuario esperar" width="0"/>
+                <img src="feb5c5859647abf4ca8529316c37321cb22efa7b41052a184071b73f8a3eef2b.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="80a34966b5caac22fdbaa5641575307abd41c8f039ddce880c04f9a5b1b5a8a7.png" title=" usuario enters 'EVC' into the element" width="0"/>
+                <img src="ea829775df1b68bb8fe24a09e095cf83842f3382c5208d63f67b545f7cad9bf7.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="290a686876f2d2febc12c3397ff957f76eeaed36feb6198a738f233c0fa88a5b.png" title=" usuario clicks on the element" width="0"/>
+                <img src="05b5f0a58c38e99954a8a7d64ff646f71a867297ca50766e4f5577e34dc85f94.png" title=" Usuario esperar" width="0"/>
+                <img src="1245ce50f82deff5261346d230b1084e30359da98c4f59a53a76bda2c0f9e73a.png" title=" usuario clicks on the element" width="0"/>
+                <img src="d5ebda2c05c0586654a9e1dd60385fa821a751b00885c1cf030391b6efdc2f1c.png" title=" Usuario esperar" width="0"/>
+                <img src="d5ebda2c05c0586654a9e1dd60385fa821a751b00885c1cf030391b6efdc2f1c.png" title=" Usuario esperar" width="0"/>
+                <img src="fea96d1740857e51b6b6cbc7d6882b9be0ce42297f7b1d5e08cf26d96573d560.png" title=" usuario clicks on the element" width="0"/>
+                <img src="2fbc81b9207c70dbccacb7fe17a1ade61b6ad0f88010bb42e47390930aa2b5d0.png" title=" usuario clicks on the element" width="0"/>
+                <img src="38db3a836754c1bc06782a293a1dbc5db72ea2b6c0095bd235502feb39701d84.png" title=" Usuario esperar" width="0"/>
+                <img src="6be03eee4b187160b09f89cccb6ffcb86fd3ae77501948383d8627320e20b096.png" title=" usuario clicks on the element" width="0"/>
+                <img src="c32f8849f94c1fe8fb43c08218b66ad65bc3516af1375b38a655443db1df9229.png" title=" Usuario esperar" width="0"/>
+                <img src="c32f8849f94c1fe8fb43c08218b66ad65bc3516af1375b38a655443db1df9229.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="74215c3c74acfd039e567bfc7290e212af7fe5a43f3179deeb63df030645bb0d.png" title=" usuario enters 'auto' into the element" width="0"/>
+                <img src="75ba21f0aea16eaae54b702d6eb63488ac180ba329f58362ce7918aa49f0e92e.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="56ae787615dd36df501d3f466f6134e0f3ad4c81da37002816eb7b05da6676d9.png" title=" usuario clicks on the element" width="0"/>
+                <img src="d8d5ac2d9dc043ecd75fc4fa8b2dc39b2cf8b40c3475241e1335f69489f2209a.png" title=" usuario clicks on the element" width="0"/>
+                <img src="0d25646cd505f8ce542df0af93834cef9d4c28c176ab3c48801c5b0dd9fa4352.png" title=" Usuario esperar" width="0"/>
+                <img src="82cb3b1690cbbf34437c7e7a9ce735782c19005b73e30f8be8db4fed40b27a5d.png" title=" usuario clicks on the element" width="0"/>
+                <img src="923c7edcf52b032ed729811d788c4abf703381d03d8cd9c99e4f6a8c79203137.png" title=" usuario clicks on the element" width="0"/>
+                <img src="a697f95f1f36b6314859bdf0b65f227f46c4e355bb081c1cb66b1432ba09444e.png" title=" Usuario esperar" width="0"/>
+                <img src="96960600c768729719a9a31cad69c533dd6e099eb56efda24205b898ced3209c.png" title=" usuario enters '8' into the element" width="0"/>
+                <img src="25b01e9f2116ea43810be3a2268a2f7db071e51cd5ebe3b0f85824b58c37c3cc.png" title=" usuario enters 'Ejecuci&oacute;n de casos de prueba' into the element" width="0"/>
+                <img src="310216f6467ae4a241d05941481da81ad80bd9ddb4f463b9387969362fcc79a9.png" title=" usuario clicks on the element" width="0"/>
+                <img src="5c9c78f4455611513fc8a592b09dcae8b9221278c748515e5e2a69301489f910.png" title=" Usuario esperar" width="0"/>
+                <img src="5c9c78f4455611513fc8a592b09dcae8b9221278c748515e5e2a69301489f910.png" title=" Usuario ingresar informacion reporte (completed)" width="0"/>
+                <img src="438a6e1e4b504046b207a743cecc84534f2fa20ddc19abaed87dfb8894417bfc.png" title=" Usuario cerrar dia" width="0"/>
+                <img src="438a6e1e4b504046b207a743cecc84534f2fa20ddc19abaed87dfb8894417bfc.png" title=" usuario clicks on the element" width="0"/>
+                <img src="abcca9f836ee3fdd84af808e9ae97e8178e5b442f40db2a6b23ef499907fa186.png" title=" Usuario esperar" width="0"/>
+                <img src="abcca9f836ee3fdd84af808e9ae97e8178e5b442f40db2a6b23ef499907fa186.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="600bccb9170adfa76584f3f1d862df6e512aff4fb5ab3ab735cadaee2d6d3d82.png" title=" usuario clicks on the element" width="0"/>
+                <img src="a9afd92ece350c7aadbf8f075ce81f32aeaf2f62eed966a22bffaa74e623b13a.png" title=" Usuario esperar" width="0"/>
+                <img src="a9afd92ece350c7aadbf8f075ce81f32aeaf2f62eed966a22bffaa74e623b13a.png" title=" Usuario esperar" width="0"/>
+                <img src="a9afd92ece350c7aadbf8f075ce81f32aeaf2f62eed966a22bffaa74e623b13a.png" title=" Usuario cerrar dia (completed)" width="0"/>
+                <img src="a9afd92ece350c7aadbf8f075ce81f32aeaf2f62eed966a22bffaa74e623b13a.png" title=" Usuario conocer dia" width="0"/>
+                <img src="20756f4944259fc68af93f2cb70d68006668a0aeb58b28cce314a3fbbfba20e9.png" title=" Usuario seleccionar dia" width="0"/>
+                <img src="20756f4944259fc68af93f2cb70d68006668a0aeb58b28cce314a3fbbfba20e9.png" title=" usuario clicks on the element" width="0"/>
+                <img src="20756f4944259fc68af93f2cb70d68006668a0aeb58b28cce314a3fbbfba20e9.png" title=" Usuario seleccionar dia (completed)" width="0"/>
+                <img src="d076c699138a2160cbdf85091ff4e8f14f4ffbf61b8f6b3f8a88c709602dc021.png" title=" Usuario seleccionar nuevo reporte" width="0"/>
+                <img src="d076c699138a2160cbdf85091ff4e8f14f4ffbf61b8f6b3f8a88c709602dc021.png" title=" usuario clicks on the element" width="0"/>
+                <img src="7b99c8915499a5072db0686695bdb420db50f3e3a31f0153a18ab7ac3d12e615.png" title=" Usuario esperar" width="0"/>
+                <img src="7b99c8915499a5072db0686695bdb420db50f3e3a31f0153a18ab7ac3d12e615.png" title=" Usuario seleccionar nuevo reporte (completed)" width="0"/>
+                <img src="51de313121c712094bc0549f3f3a39d685fd8bd19270fcdd1527a1d3dfb6aa8d.png" title=" Usuario ingresar informacion reporte" width="0"/>
+                <img src="51de313121c712094bc0549f3f3a39d685fd8bd19270fcdd1527a1d3dfb6aa8d.png" title=" usuario clicks on the element" width="0"/>
+                <img src="a91c6e83603a15ba1317b3f2da6d671ca19817742398c427582f61e5177ac1f9.png" title=" Usuario esperar" width="0"/>
+                <img src="0281b8f5a63296ad0b77df032038532058fd6aecc618e490981ecca227b193e0.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="7b462bf67ddc4dfedec795a2eeabb22eee793f66909879e47d1a3147cb719831.png" title=" usuario enters 'EVC' into the element" width="0"/>
+                <img src="c019a66733405d3c8c4c17e8cd8f95b649600065c1b8c5ce964420e920ee645b.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="04ad75f45c33970afe95097b61472e9cbb43d283afa247775f0d57343be4e235.png" title=" usuario clicks on the element" width="0"/>
+                <img src="fb4a7ec93eb4c509c81e96ec24242efc46f166321b02627f5a8ef803b6817d66.png" title=" Usuario esperar" width="0"/>
+                <img src="427d004f6e14874b280de0f28fa847eeb0e5ec4933037ddc2979000e9cd04caf.png" title=" usuario clicks on the element" width="0"/>
+                <img src="8623deb670b9d64b5895b2a3cd52b0eac2cd641e2a207e200fd7af55c5d2e3f1.png" title=" Usuario esperar" width="0"/>
+                <img src="8623deb670b9d64b5895b2a3cd52b0eac2cd641e2a207e200fd7af55c5d2e3f1.png" title=" Usuario esperar" width="0"/>
+                <img src="57f5c59a507ba4944639012db9abcd95dfd83941fe67732c6f466252a1ab37c4.png" title=" usuario clicks on the element" width="0"/>
+                <img src="cc6b573f4f9f912082b8cb407e120b39e8a9e89ddc518ecf2042f10f7f2c4eb2.png" title=" usuario clicks on the element" width="0"/>
+                <img src="7cc65ac0b67675c102597fe7dc5d3a95e7716313d236b2230014373f437cac1c.png" title=" Usuario esperar" width="0"/>
+                <img src="fc07e3115f4e6a0bfd8760c6b9e72ea6eb091474f001f2201506be08ccc1a2ac.png" title=" usuario clicks on the element" width="0"/>
+                <img src="9d96cf58e0727c24324654b1d0489cfba0890e82ca13016ba6fed58224cd46c1.png" title=" Usuario esperar" width="0"/>
+                <img src="9d96cf58e0727c24324654b1d0489cfba0890e82ca13016ba6fed58224cd46c1.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="6e9e32267c71ecaf18629f403570e45e24429b7c2acea3e53bab29302e0f0626.png" title=" usuario enters 'auto' into the element" width="0"/>
+                <img src="aeaf22541b859600197fca094e3088ca4f456362ec8eaf9d3b6de9023749a464.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="977b783b27e8eff2c48b416ec350f249fd99dee4912c8bf2ca1fdfa3442fe4d9.png" title=" usuario clicks on the element" width="0"/>
+                <img src="d38303303b2bf6025da86b4586d0dbd8a8eb903e4649c60cb69e0b4a91918c9b.png" title=" usuario clicks on the element" width="0"/>
+                <img src="b4403d71aef7b21f7f70ab2a5d054973fe7a7f0a13916f7194033a98bf2f8572.png" title=" Usuario esperar" width="0"/>
+                <img src="5e335edaf3e48908e3d6907b40cf47b10e7e95b602e9b0786711c320294c8d95.png" title=" usuario clicks on the element" width="0"/>
+                <img src="c73b01605793b0dd7d972f894ed96ef07ad74897abca30c7b7f83feacc5da846.png" title=" usuario clicks on the element" width="0"/>
+                <img src="a37c0a78f031a44aa3bcbd5a599dd14a401b9e8e51183bb8091c4a10846e68f6.png" title=" Usuario esperar" width="0"/>
+                <img src="a63b0e2f7247bda0679c49fb7d1bb7fd85286e61f665ff84bd4a9a7a7111456e.png" title=" usuario enters '8' into the element" width="0"/>
+                <img src="d54c3d6cfa8b0feb62f0183405d194714eb486be4bcf1f171d8337013bd11e70.png" title=" usuario enters 'Ejecuci&oacute;n de casos de prueba' into the element" width="0"/>
+                <img src="4130237c61f01ffe8f03a206936647e77b4e515cfd4c1c43259fa04bbfce7ff4.png" title=" usuario clicks on the element" width="0"/>
+                <img src="3498b9c051d9e707ccf216f90502bdc3bd782920aeca5e5e07e4bb16bad3871d.png" title=" Usuario esperar" width="0"/>
+                <img src="3498b9c051d9e707ccf216f90502bdc3bd782920aeca5e5e07e4bb16bad3871d.png" title=" Usuario ingresar informacion reporte (completed)" width="0"/>
+                <img src="bac41d0a791dcd162913894a9e7027a1bfe6b8b42220a4e21e73c67d19697d8d.png" title=" Usuario cerrar dia" width="0"/>
+                <img src="bac41d0a791dcd162913894a9e7027a1bfe6b8b42220a4e21e73c67d19697d8d.png" title=" usuario clicks on the element" width="0"/>
+                <img src="de65e361a5d6ac6e17cb49f6321f8ba5928cad09d5d0381c549fe3a713e2485a.png" title=" Usuario esperar" width="0"/>
+                <img src="de65e361a5d6ac6e17cb49f6321f8ba5928cad09d5d0381c549fe3a713e2485a.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="6a948eadadae468499f414caff9b821ad5068e79dd68722e7a973049ca061d34.png" title=" usuario clicks on the element" width="0"/>
+                <img src="000944ab627a3b9ec58c3a8c20c0b94fbc72032f76e54400a960dc9fca313966.png" title=" Usuario esperar" width="0"/>
+                <img src="000944ab627a3b9ec58c3a8c20c0b94fbc72032f76e54400a960dc9fca313966.png" title=" Usuario esperar" width="0"/>
+                <img src="000944ab627a3b9ec58c3a8c20c0b94fbc72032f76e54400a960dc9fca313966.png" title=" Usuario cerrar dia (completed)" width="0"/>
+                <img src="000944ab627a3b9ec58c3a8c20c0b94fbc72032f76e54400a960dc9fca313966.png" title=" Usuario conocer dia" width="0"/>
+                <img src="4c85a28d04ae58ec01df341ca234fb0c3e631456899ebc57aec6c8469f99836e.png" title=" Usuario seleccionar dia" width="0"/>
+                <img src="4c85a28d04ae58ec01df341ca234fb0c3e631456899ebc57aec6c8469f99836e.png" title=" usuario clicks on the element" width="0"/>
+                <img src="4c85a28d04ae58ec01df341ca234fb0c3e631456899ebc57aec6c8469f99836e.png" title=" Usuario seleccionar dia (completed)" width="0"/>
+                <img src="bba149de4f05b8c113fec183d3d1a86bd6fc765de2038bfbc0c194a01ffc99b2.png" title=" Usuario seleccionar nuevo reporte" width="0"/>
+                <img src="bba149de4f05b8c113fec183d3d1a86bd6fc765de2038bfbc0c194a01ffc99b2.png" title=" usuario clicks on the element" width="0"/>
+                <img src="6c45ee4d4525c251e7981bf0b93ba240319233ffe5d1321dbab1cf3d803670e9.png" title=" Usuario esperar" width="0"/>
+                <img src="6c45ee4d4525c251e7981bf0b93ba240319233ffe5d1321dbab1cf3d803670e9.png" title=" Usuario seleccionar nuevo reporte (completed)" width="0"/>
+                <img src="d06e84facd111820195d67d4403184aa77d1a918a15794daed5f6a6787acc09c.png" title=" Usuario ingresar informacion reporte" width="0"/>
+                <img src="d06e84facd111820195d67d4403184aa77d1a918a15794daed5f6a6787acc09c.png" title=" usuario clicks on the element" width="0"/>
+                <img src="33c252a6477db5d6d4fc4776ce200718c75439473513a26e907d5cbc8760aba9.png" title=" Usuario esperar" width="0"/>
+                <img src="965966b517a0e27e4b6286889553be850d8f4d693ba4af4f04aa0590ba494465.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="a1dc41a43e04a2d656018e9eb7aad747758d1f83eaaed448322d9486fef0466f.png" title=" usuario enters 'EVC' into the element" width="0"/>
+                <img src="2181d4ef10026feac37a64fcb47bce277cc42af8e4b6e4d16b1143f693738126.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="5b31c99f61b87968ef14cd82421b017744593fa748ba045d2bbe5f9325db7563.png" title=" usuario clicks on the element" width="0"/>
+                <img src="471460e45073a5257528991cfe800bc6710ee945f344aaeef15658dc3a93359f.png" title=" Usuario esperar" width="0"/>
+                <img src="407546a68ffbc4f3be28d72371363b7b3b1863fb791e2910f94a1cf0b9903536.png" title=" usuario clicks on the element" width="0"/>
+                <img src="279e28283586c9500d18d4a2a67bfdb520f979f517aee63da3d914d70451cf4f.png" title=" Usuario esperar" width="0"/>
+                <img src="279e28283586c9500d18d4a2a67bfdb520f979f517aee63da3d914d70451cf4f.png" title=" Usuario esperar" width="0"/>
+                <img src="f88838457d0cec1946f240b0d5efce9637a58cfcb5023ffec21614b7f030c732.png" title=" usuario clicks on the element" width="0"/>
+                <img src="2f05426bd8a02ce89d4468ffec44690fa19112892357d52673bea442bc1e3341.png" title=" usuario clicks on the element" width="0"/>
+                <img src="9cba7661c192f57860c762f0c64d65d5393f4f33e62a32a05fa377f0fcc75a7f.png" title=" Usuario esperar" width="0"/>
+                <img src="2414e9b8e290e39a19bb0ac48ac7cb093730c65946a66b7bc30ac051ccc804f5.png" title=" usuario clicks on the element" width="0"/>
+                <img src="dff7ccbfa7f019078d730201086a85eafbae252391e4c77728d2b35c6b66e5d2.png" title=" Usuario esperar" width="0"/>
+                <img src="dff7ccbfa7f019078d730201086a85eafbae252391e4c77728d2b35c6b66e5d2.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="c619056001160c902d184fa3e30592c287cffc6d1581b3be1857f9a79b1b91a6.png" title=" usuario enters 'auto' into the element" width="0"/>
+                <img src="abab2b2441c48069d32eab8a932311831e94d2a9012d478fb95b04c6aeca20e9.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="9bd767889b160712ed772e1166bd1d9a0dba904777e6f77312f4aee6d7b89b27.png" title=" usuario clicks on the element" width="0"/>
+                <img src="de41ab4c6d274fda7acbce9642b551503ddfa0650632aebec5b8b6fec14c13fe.png" title=" usuario clicks on the element" width="0"/>
+                <img src="c4a371e7aed3f08eb5a8faee84f87a895eab17351029145876d47d8e4cac1c31.png" title=" Usuario esperar" width="0"/>
+                <img src="cfb1e469ab6f3e8059d662252a9e8d1bd44b6c1bd320c2adeb7ef621e0c118e7.png" title=" usuario clicks on the element" width="0"/>
+                <img src="df67c9716d040a39cd1c8453db7b012fef58611965e0f5287869415136fc524f.png" title=" usuario clicks on the element" width="0"/>
+                <img src="1df60dbd263224aff6ef69db137ad1567357e18e693e55cf28b3d67e20a6a306.png" title=" Usuario esperar" width="0"/>
+                <img src="1c8da4e7d14dbba0007fe0c9757392ebe91ef5586d80a80adb7be44ae786bfa8.png" title=" usuario enters '8' into the element" width="0"/>
+                <img src="c244d02829914cc43f441bc676617b08128638df319fd41853d6a23dacabe84a.png" title=" usuario enters 'Ejecuci&oacute;n de casos de prueba' into the element" width="0"/>
+                <img src="96d592a097a831bf9bc59fccb31881df890c7e3bdfd50640288197e3996a590e.png" title=" usuario clicks on the element" width="0"/>
+                <img src="0c1671c2ea41b99210eedb1016fffc6404d8291c3736c0ec5396682d09a649c8.png" title=" Usuario esperar" width="0"/>
+                <img src="0c1671c2ea41b99210eedb1016fffc6404d8291c3736c0ec5396682d09a649c8.png" title=" Usuario ingresar informacion reporte (completed)" width="0"/>
+                <img src="be31e66ca71d1a01e7c27bc1313c946b851c181490a7d35d53b507a19e448d0e.png" title=" Usuario cerrar dia" width="0"/>
+                <img src="be31e66ca71d1a01e7c27bc1313c946b851c181490a7d35d53b507a19e448d0e.png" title=" usuario clicks on the element" width="0"/>
+                <img src="302171053a87bdcd069de52fb04dde1bfff602f983b5b78925d2322be853b33b.png" title=" Usuario esperar" width="0"/>
+                <img src="302171053a87bdcd069de52fb04dde1bfff602f983b5b78925d2322be853b33b.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="e8c303ee38a4545e785d24a5b66ec7f58994cf251803c443e69a94da7979b0dc.png" title=" usuario clicks on the element" width="0"/>
+                <img src="4cc88cc009154b14a65bec33d1f72d3f459d3ae7ad727efeeaf55cf233921d30.png" title=" Usuario esperar" width="0"/>
+                <img src="4cc88cc009154b14a65bec33d1f72d3f459d3ae7ad727efeeaf55cf233921d30.png" title=" Usuario esperar" width="0"/>
+                <img src="4cc88cc009154b14a65bec33d1f72d3f459d3ae7ad727efeeaf55cf233921d30.png" title=" Usuario cerrar dia (completed)" width="0"/>
+                <img src="4cc88cc009154b14a65bec33d1f72d3f459d3ae7ad727efeeaf55cf233921d30.png" title=" Usuario conocer dia" width="0"/>
+                <img src="85ffd548c723245399e64d9f0de2689939fe9bae55d0b5f4daec028bb3fda1d1.png" title=" Usuario seleccionar dia" width="0"/>
+                <img src="85ffd548c723245399e64d9f0de2689939fe9bae55d0b5f4daec028bb3fda1d1.png" title=" usuario clicks on the element" width="0"/>
+                <img src="85ffd548c723245399e64d9f0de2689939fe9bae55d0b5f4daec028bb3fda1d1.png" title=" Usuario seleccionar dia (completed)" width="0"/>
+                <img src="8ea5e01fd70f60474498746d58782a432975c423155fe1f2a706f7e059c11f0f.png" title=" Usuario seleccionar nuevo reporte" width="0"/>
+                <img src="8ea5e01fd70f60474498746d58782a432975c423155fe1f2a706f7e059c11f0f.png" title=" usuario clicks on the element" width="0"/>
+                <img src="f0d46bcbb2fe9adde343b171596aae4b113fdb31d9c3f7f76800ba75ff6a78e4.png" title=" Usuario esperar" width="0"/>
+                <img src="f0d46bcbb2fe9adde343b171596aae4b113fdb31d9c3f7f76800ba75ff6a78e4.png" title=" Usuario seleccionar nuevo reporte (completed)" width="0"/>
+                <img src="9147a41cfc8008ec8b9461c11afb3dadb3c777eb56e934dd71d5fd84d0dc0c22.png" title=" Usuario ingresar informacion reporte" width="0"/>
+                <img src="9147a41cfc8008ec8b9461c11afb3dadb3c777eb56e934dd71d5fd84d0dc0c22.png" title=" usuario clicks on the element" width="0"/>
+                <img src="a9ffd7e4ff978cd213ebaeca55ef3d1c7eb69148eb8d184650e2f6d1b760d910.png" title=" Usuario esperar" width="0"/>
+                <img src="03be06616daebe31045ce757857a3808e584e56fd1a0ebea3daaf4f440f2f6fe.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="6c75a1fef3c349b9752723d00f235d4a0584d943d8d81ffb9fbf25ffbca87efa.png" title=" usuario enters 'EVC' into the element" width="0"/>
+                <img src="1758feaccce70e52d46a2305a757a909f48aa49e506f8ae3c5214d199f0f7727.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="602cabe51d70ec8a9fa97af9ab7e0cc65bc3410e0cf01f3a683ed041e8500be2.png" title=" usuario clicks on the element" width="0"/>
+                <img src="d100b01bb9267c2138ee2d050e2eac53b0048bf2230df003212ebebd76028c12.png" title=" Usuario esperar" width="0"/>
+                <img src="238245989ce0ad30c70c7470a02a23154f0b0b0d0677abf27d87d767d004de13.png" title=" usuario clicks on the element" width="0"/>
+                <img src="0b20fd71facf74e89703d76e5912939f31cc3e66418650dce08e8408ce334893.png" title=" Usuario esperar" width="0"/>
+                <img src="0b20fd71facf74e89703d76e5912939f31cc3e66418650dce08e8408ce334893.png" title=" Usuario esperar" width="0"/>
+                <img src="78c51e958ffa55efa7b536a2073d14dd2da54fd2b3d39c69e84d505130e988a3.png" title=" usuario clicks on the element" width="0"/>
+                <img src="caabf4f29c30ebdd294e15151300f4c9c91883b7177a840615f8248c0ab14170.png" title=" usuario clicks on the element" width="0"/>
+                <img src="9b4ee7f8304a6c30c03f096b762966255128d8d566cd7f7122151bcdc4ceb2aa.png" title=" Usuario esperar" width="0"/>
+                <img src="0eac8b7c27399cc45f439497f346fed05d15f403fc05bcbf5ec9baff9e4dffa0.png" title=" usuario clicks on the element" width="0"/>
+                <img src="13788c16658a77f6add62a0a0f6fb13e30823b9257a486c720650064c12ea0df.png" title=" Usuario esperar" width="0"/>
+                <img src="13788c16658a77f6add62a0a0f6fb13e30823b9257a486c720650064c12ea0df.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="02cabab2ae3601f5d6925ab75fde325501aedb0e967cf1cf27f33500062e424f.png" title=" usuario enters 'auto' into the element" width="0"/>
+                <img src="6594c06817922849e347805ad07316b8a6cae05ceca2317d203ee13197201806.png" title=" usuario types 'ENTER' in the element" width="0"/>
+                <img src="9d71a6c113c6eb080e0aef06c1ca97ab3c8906be0baa0526a1f24e704994618e.png" title=" usuario clicks on the element" width="0"/>
+                <img src="070dfb3d42acf8e06e8b3d786bded728eccea0e16f2929015e5d7349d00fe0c6.png" title=" usuario clicks on the element" width="0"/>
+                <img src="685b454bf471e9deff44c7216f748668604b2e5662632b3e8866b413e77ab3cc.png" title=" Usuario esperar" width="0"/>
+                <img src="d94569922d5ba928c0179ec2487353277d4a7122b78461f6046d1825141f893b.png" title=" usuario clicks on the element" width="0"/>
+                <img src="74ce0d6ab69181c13967e4915959135df243a0766c787ee2e85ad343612929d0.png" title=" usuario clicks on the element" width="0"/>
+                <img src="721c7f140b18ea6a0cdce470f0c4b3bd0907ecb908a76a2aa1e9082b10ca7907.png" title=" Usuario esperar" width="0"/>
+                <img src="65559ff9d2c62119dff371f9454058775c005ec82dce5c0bf7d3a97b1469047a.png" title=" usuario enters '8' into the element" width="0"/>
+                <img src="8c7eb02af45941f8978f286c3472f440c55331f026c2c1540c3fc0e5950077f8.png" title=" usuario enters 'Ejecuci&oacute;n de casos de prueba' into the element" width="0"/>
+                <img src="0a3e00410f3318792fc66ae784619ae39f9f93c0f0f657da4e843bcb0d9d7978.png" title=" usuario clicks on the element" width="0"/>
+                <img src="999a13f88e4dd49f81eefb525e130e0f72e6ebc74bea1a1abad1d196b38faae6.png" title=" Usuario esperar" width="0"/>
+                <img src="999a13f88e4dd49f81eefb525e130e0f72e6ebc74bea1a1abad1d196b38faae6.png" title=" Usuario ingresar informacion reporte (completed)" width="0"/>
+                <img src="ea9db7113a2edee9484e398f62fa04990c5074c9220eca9bd049317172b43899.png" title=" Usuario cerrar dia" width="0"/>
+                <img src="ea9db7113a2edee9484e398f62fa04990c5074c9220eca9bd049317172b43899.png" title=" usuario clicks on the element" width="0"/>
+                <img src="81eeb701d21aa13dddfa80f3690530c765ef226259af4b4c8655da5eca533a62.png" title=" Usuario esperar" width="0"/>
+                <img src="81eeb701d21aa13dddfa80f3690530c765ef226259af4b4c8655da5eca533a62.png" title=" Usuario cambiar al iframe" width="0"/>
+                <img src="465aaa0e85c3e8d2e5f846ee7794eef8793a1e7e5c531b411fac2a1f6dacf03a.png" title=" usuario clicks on the element" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Usuario esperar" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Usuario esperar" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Usuario cerrar dia (completed)" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" When El usuario realiza el reporte de las actividades realizadas durante el dia
+| proyecto | proyecto_vacas | tipo_hora | tipo_hora_vacas | servicio | actividad | actividad_vacas | horas | comentario | comentario_vacas | fecha_vacaciones_inicio | fecha_vacaciones_fin |  |
+| EVC | Varios | H. Proyecto | H. Choucair | auto | EJECUCI&Oacute;N DE PRUEBAS | NOV-VACACIONES | 8 | Ejecuci&oacute;n de casos de prueba | Vacaciones | 1/7/2024 | 16/7/2024 |  | (completed)" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Then El usuario finaliza el reporte correctamente" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Usuario esperar" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Then titulo correcto should be a string containing 'Reporte de tiempos / D&amp;iacute;as pendientes por cerrar'" width="0"/>
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" Then El usuario finaliza el reporte correctamente (completed)" width="0"/>
+
+                <img src="f9a1cb66d709061b35cbe94c4931a1723daad437670b8350b3b6aee4f2b29198.png" title=" 1: Reporte de horas laboradas ({proyecto=EVC, proyecto_vacas=Varios, tipo_hora=H. Proyecto, tipo_hora_vacas=H. Choucair, servicio=auto, actividad=EJECUCIÓN DE PRUEBAS, actividad_vacas=NOV-VACACIONES, horas=8, comentario=Ejecución de casos de prueba, comentario_vacas=Vacaciones, fecha_vacaciones_inicio=1/7/2024, fecha_vacaciones_fin=16/7/2024}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.16</span>
+</div>
+</body>
+</html>

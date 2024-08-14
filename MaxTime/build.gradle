@@ -1,0 +1,118 @@
+//Tareas de serenity
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    //son dos repositorios Maven que Gradle puede utilizar para resolver dependencias.
+    /*Primero se revisa el repositorio local (mavenLocal()), y si la dependencia no
+     se encuentra allí, se busca en el repositorio central (mavenCentral()).*/
+    mavenCentral() //Un repositorio remoto amplio y confiable que contiene una gran cantidad de bibliotecas públicas y es fácil de configurar y usar.
+    mavenLocal()  //Un repositorio en tu máquina local que contiene artefactos que has construido e instalado localmente, útil para desarrollo y pruebas rápidas.
+}
+
+//de donde toma los plugins
+//version de serenity que se va a usar
+//classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.16"
+buildscript {
+    repositories {
+
+
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.16"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+//version minima que debe soportar JDK
+sourceCompatibility = 17
+targetCompatibility = 17
+
+//codificacion version
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+ext {
+    serenityCoreVersion = '4.1.20' //'4.0.18'
+    slf4jVersion ='3.26.0' //'1.7.7'
+    serenityCucumberVersion = '4.1.20'//'4.0.18'
+    junitVersion = '4.13.2'
+    logbackVersion = '1.5.6'//'1.4.5'
+    assertJVersion = '3.26.0'//'3.23.1'
+    jacksonAnnotations = '2.17.1'//'2.13.3'
+    seleniumVersion = '4.22.0'
+    apachePoiVersion = '5.2.2'
+    log4jVersion='2.22.1'
+    junitJupiterVersion = '5.10.0'
+    googleGsonVersion ='2.10.1'
+    poiiExcelVersion = '5.0.0'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+
+            "org.apache.poi:poi-ooxml:${apachePoiVersion}",
+
+            "com.google.code.gson:gson:${googleGsonVersion}",
+
+            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+
+            "junit:junit:${junitVersion}",
+
+            "ch.qos.logback:logback-classic:${logbackVersion}", //log
+
+            "org.assertj:assertj-core:${assertJVersion}",
+
+            "com.fasterxml.jackson.core:jackson-annotations:${jacksonAnnotations}",
+
+            "org.seleniumhq.selenium:selenium-java:${seleniumVersion}",
+
+            "org.apache.poi:poi:${poiiExcelVersion}"
+
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.6'
+}
+
+
+
+test {
+//    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+//    maxParallelForks = 8
+}
+
+serenity {
+    // Specify the root package of any JUnit acceptance tests
+    testRoot="co.com.productos.certificacion.runners"
+
+    // Specify the root directory of any Cucumber feature files requirementBaseDir
+    requirementsDir = "src/test/resources/features"
+
+    reports=["single-page-html"]
+}
+
+gradle.startParameter.continueOnFailure = true
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+
+//indica con true que si una prueba falla continue ejecutando las otras
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
+
